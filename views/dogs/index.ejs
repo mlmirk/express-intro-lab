@@ -15,7 +15,7 @@
   <% dogs.forEach(dog => { %>
   <li>Type: <%=  dog.text %>
     <br>
-    Are they hypoallegenic: <%=  dog.hypoallegenic %>
+    <%=  dog.hypoallegenic ? "this dog is hypoallegenic": "this dog is NOT hypoallegenic" %>
     <br>
     
     max adult wight in pounds: <%=  dog.maxWieght %>

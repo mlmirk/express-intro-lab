@@ -9,6 +9,12 @@ const app= express()
 
 
 //confige the app
+app.get("/", (req,res)=>{
+res.redirect("/dogs")
+})
+
+
+
 app.set('view engine', 'ejs')
 
 app.get('/dogs', function(req, res) {
