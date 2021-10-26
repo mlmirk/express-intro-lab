@@ -2,19 +2,30 @@
 // import modules
 
 import express from "express"
-
+import {find} from './data/dogs-db.js'
 //create express apps
 const app= express()
 
 
 
 //confige the app
+app.set('view engine', 'ejs')
 
-app.get('/',(req,res)=>{
-  res.send("<h1>hello, worlds</h1>")
+app.get('/dogs', function(req, res) {
+  find({}, function(error, dogs) {
+    res.render('./dogs/index', {
+      dogs:dogs,
+      error:error
+    })
+  })
 })
+
+
+
+
+
 app.get('/about-us', (req,res)=>{
-  res.send("<h1>About us</h1>")
+  res.render('about-us')
 })
 
 

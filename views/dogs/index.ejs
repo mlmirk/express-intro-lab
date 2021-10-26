@@ -4,21 +4,22 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Homepage</title>
+  <title>Doggos</title>
 </head>
 <body>
-  <h1>Homepage</h1>
+  <h1>Doggos</h1>
   <%if(error){    %>
     <h2><%=error%></h2>
   <% }  %>
   <ul>
   <% dogs.forEach(dog => { %>
-  <li><%=  dog.text %>
-    -
-    <%=  dog.hypoallegenic %>
-    -
-
-    <%=  dog.maxWieght %>
+  <li>Type: <%=  dog.text %>
+    <br>
+    Are they hypoallegenic: <%=  dog.hypoallegenic %>
+    <br>
+    
+    max adult wight in pounds: <%=  dog.maxWieght %>
+  
   </li>
   <% }) %>
 
